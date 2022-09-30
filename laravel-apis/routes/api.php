@@ -2,6 +2,11 @@
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\sorting;
+
+Route::group(['prefix'=> "apis"], function() {
+    Route::get("/sort",[sorting::class, 'sort']);
+});
 
 
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
