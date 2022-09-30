@@ -8,10 +8,10 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
 Route::group(['prefix'=> "apis"], function() {
-    Route::get("/sort/{text?}",[sorting::class, 'sort']);
-    Route::get("/placeValue/{text?}",[PlaceValue::class, 'placeValue']);
+    Route::get("/sort/{string?}",[sorting::class, 'sort']);
+    Route::get("/placeValue/{int?}",[PlaceValue::class, 'placeValue']);
     Route::get("/convert/{text?}",[convertingToBinary::class, 'convertToBinary']);
-    Route::get("/calculate/{text?}",[calculating::class, 'calculate']);
+    Route::get("/calculate/{string?}",[calculating::class, 'calculate']);
 });
 
 
