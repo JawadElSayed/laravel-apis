@@ -35,7 +35,7 @@ class sorting extends Controller {
         // sorting upper and lower
         foreach ($upper_case_array as $upper){
             foreach ($lowwer_case_array as $lower){
-                if (ord($lower)-32 <= ord($upper) && !in_array($lower, $final_array)){
+                if (ord($lower)-32 <= ord($upper) && ( !in_array($lower, $final_array) || $lower == $final_array[count($final_array)-1])){
                     array_push($final_array, $lower);
                 }
             }
