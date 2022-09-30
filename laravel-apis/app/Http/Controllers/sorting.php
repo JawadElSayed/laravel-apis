@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 class sorting extends Controller {
 
-    function sort ($string = "eA2a1E"){
+    function sort ($string = ""){
         $lowwer_case_array = array();
         $upper_case_array = array();
         $number_array = array();
